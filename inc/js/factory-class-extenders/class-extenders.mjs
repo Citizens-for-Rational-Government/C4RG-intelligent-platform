@@ -144,9 +144,14 @@ function extendClass_conversation(originClass, referencesObject){
          * @returns {Message[]} - The messages array
          */
         getMessages(agentOnly=true, run_id=this.run_id, thread_id){
-            let messages = thread_id?.length
-                ? this.#messages.filter(message=>message.thread_id===thread_id)
-                : this.#messages.filter(message=>message.run_id===run_id)
+            let messages
+            if(thread_id?.length){
+                messages = this.#messages.filter(message=>message.thread_id===thread_id)
+            } else if(run_id?.length){
+                messages = this.#messages.filter(message=>message.run_id===run_id)
+            } else {
+                messages = this.#messages
+            }
             if(agentOnly)
                 messages = messages.filter(message => ['member', 'user'].indexOf(message.role) < 0)
             return messages
