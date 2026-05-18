@@ -234,7 +234,7 @@ class Bot {
 	 * @param {Avatar} Avatar - The Avatar instance
 	 * @returns {object} - The Response object { responses, routine, success, }
 	 */
-	async greeting(dynamic=false, greetingPrompt='Greet me and tell me briefly what we did last', Avatar){
+	async greeting(dynamic=false, greetingPrompt='Greet me and tell me briefly what we did last', Avatar, variables=null){
 		let firstAccess=this.#firstAccess,
 			responses=[],
 			routine=this.#greetingRoutine
@@ -242,7 +242,7 @@ class Bot {
 			const message = this.greetings?.[Math.floor(Math.random() * this.greetings.length)]
 				?? `Apologies, I am having trouble accessing my greetings at the moment. Please try again later.`
 			const { thread_id, llmProvider, } = this
-			llmProvider.variables ??= this.promptVariables
+			llmProvider.variables = variables ?? this.promptVariables // always fresh per-visitor; was ??= (first-caller cached)
 			responses = dynamic
 				? await mBotGreetings(llmProvider, greetingPrompt, this.#llm, this.#factory, Avatar)
 				: [{
@@ -744,8 +744,8 @@ class BotAgent {
      * @param {boolean} dynamic - Whether to use LLM for greeting
 	 * @returns {object} - The Response object { responses, routine, success, }
      */
-    async greeting(dynamic=false, greetingPrompt='Greet me with what we did last'){
-        const greeting = await this.activeBot.greeting(dynamic, greetingPrompt, this.#avatar)
+    async greeting(dynamic=false, greetingPrompt='Greet me with what we did last', variables=null){
+        const greeting = await this.activeBot.greeting(dynamic, greetingPrompt, this.#avatar, variables)
         return greeting
     }
 	/**

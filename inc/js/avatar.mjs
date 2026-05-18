@@ -897,7 +897,7 @@ class Avatar extends EventEmitter {
      *   - type: Type of configuration (optional)
      * @returns {Promise<object>} - The response object containing the configuration details.
      */
-    async configure(params={}){
+    async configure(params={}, session={}){
         const { adaid, aid, bid, mbr, mid, vld, type, ...rest } = params
         const response = {
             activeBot: undefined,
@@ -944,10 +944,16 @@ class Avatar extends EventEmitter {
             activeBot.promptVariables.aid = aid
             activeBot.promptVariables.adaid = adaid
             requestGreeting = platformGreeting ?? requestGreeting
-            const { responses, routine, } = await this.#botAgent.greeting(true, requestGreeting)
+            const configVariables = { ...activeBot.promptVariables } // snapshot after full cascade
+            session._activeBotId = activeBot.id
+            session._promptVariables = configVariables
+            const { responses, routine, } = await this.#botAgent.greeting(true, requestGreeting, configVariables)
             activeBotResponse.responses = responses.map(response=>mPruneMessage(this.activeBotId, response.message, 'greeting', activeBotResponse.processStartTime))
         } else {
-            const { responses, routine, } = await this.#botAgent.greeting()
+            const configVariables = { ...activeBot.promptVariables } // snapshot after cascade 00-01
+            session._activeBotId = activeBot.id
+            session._promptVariables = configVariables
+            const { responses, routine, } = await this.#botAgent.greeting(false, undefined, configVariables)
             activeBotResponse.responses = responses.map(response=>mPruneMessage(this.activeBotId, response.message, 'greeting', activeBotResponse.processStartTime))
         }
         response.instructions = instructions
