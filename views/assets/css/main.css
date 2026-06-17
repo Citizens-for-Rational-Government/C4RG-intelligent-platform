@@ -2,58 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
 @import url("chat.css");
 body.is-loading { opacity: 0; } /* added to prevent FOUC - see wrappers.js */
-/* C4RG Global */
-.hide {
-    animation: none !important;
-    display: none !important;
-}
-.show {
-    display: flex !important;
-	opacity: 1 !important;
-}
-/* C4RG Specific */
-/* candidates */
-#candidates-states {
-	cursor: pointer;
-	display: flex;
-	gap: 0;
-	margin-bottom: 1rem;
-	width: 100%;
-}
-#candidates-states .state-tab {
-	flex: 1;
-	display: block;
-	text-align: center;
-	padding: 0.6em 0;
-	background: #ffffff;
-	color: #000000;
-	text-decoration: none;
-}
-#candidates-states .state-tab:hover {
-	background: #ff0000;
-	color: #ffffff;
-}
-#candidates-states .state-tab.active {
-	background: #0000ff;
-	color: #ffffff;
-	cursor: none;
-}
-.primary-date {
-    color: navy;
-    display: flex;
-    font-size: 1.5rem;
-    font-weight: bold;
-    justify-content: center;
-    margin-bottom: 1rem;
-    width: 100%;
-}
-.no-recommendation {
-	color: darkmagenta;
-	display: flex;
-	font-style: italic;
-	font-weight: bold;
-	width: 100%;
-}
 /*
 	Dopetrope by HTML5 UP
 	html5up.net | @ajlkn
@@ -2467,7 +2415,70 @@ input, select, textarea {
 			margin: 1.25em 12em;
 			padding: 0.75em 0;
 		}
-
+/* Dopetrope END */
+/* C4RG Global */
+.hide {
+    animation: none !important;
+    display: none !important;
+}
+.show {
+    display: flex !important;
+	opacity: 1 !important;
+}
+/* C4RG Specific */
+/* basics */
+h3, h4, h5 {
+	display: flex;
+}
+h4 + ul, h5 {
+	margin-left: 1rem;
+}
+h5 + ul {
+	margin-left: 2rem;
+}
+/* candidates */
+#candidates-states {
+	cursor: pointer;
+	display: flex;
+	gap: 0;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+#candidates-states .state-tab {
+	flex: 1;
+	display: block;
+	text-align: center;
+	padding: 0.6em 0;
+	background: #ffffff;
+	color: #000000;
+	text-decoration: none;
+}
+#candidates-states .state-tab:hover {
+	background: #ff0000;
+	color: #ffffff;
+}
+#candidates-states .state-tab.active {
+	background: #0000ff;
+	color: #ffffff;
+	cursor: none;
+}
+.primary-date {
+    color: navy;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.no-recommendation {
+	color: darkmagenta;
+	display: flex;
+	font-style: italic;
+	font-weight: bold;
+	width: 100%;
+}
+/* Media Queries */
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
@@ -2557,7 +2568,6 @@ input, select, textarea {
 	#navPanel, #titleBar {
 		display: none;
 	}
-
 	@media screen and (max-width: 980px) {
 
 		/* Basic */
