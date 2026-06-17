@@ -2430,10 +2430,10 @@ input, select, textarea {
 h3, h4, h5 {
 	display: flex;
 }
-h4 ~ ul, h5 {
+h4 + ul, h5 {
 	margin-left: 1rem;
 }
-h5 ~ ul {
+h5 + ul {
 	margin-left: 2rem;
 }
 /* candidates */
