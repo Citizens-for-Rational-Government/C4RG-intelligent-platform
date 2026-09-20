@@ -5,6 +5,51 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .quote-banner {
+        box-sizing: border-box;
+        width: 800px;
+        max-width: 100%;
+        min-height: 308px;
+        margin: 0 auto;
+        padding: 40px;
+        background: #d2232a;
+        color: #fff;
+        text-align: center;
+        font-family: "Garamond", "EB Garamond", "Adobe Garamond Pro", Georgia, "Times New Roman", serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .clean-weight {
+        font-weight: 500;
+      }
+      .quote-banner p {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.02;
+        text-align: center;
+      }
+      .quote-banner p + p { margin-top: 26px; }
+      .quote-banner .quote-author {
+        margin-top: 34px;
+        text-align: center;
+        font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 900;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+      }
+      @media (max-width: 480px) {
+        .quote-banner p { font-size: 24px; }
+      }
+      .h3-inline {
+        display: inline;
+        font-size: 1.17em;      /* browser default h3 size */
+        font-weight: bold;
+        line-height: inherit;
+        margin: 0;
+      }
+      </style>
     <script async src="assets/js/tracking.js"></script>
     <script defer src="assets/js/loader.js"></script>
   </head>
@@ -20,7 +65,15 @@
     <div id="page-header">
       <section id="header"></section>
       <section id="main">
-        <div class="container">
+        
+        <div class="quote-banner">
+          <p>Never doubt that a small group of<br />thoughtful, committed<br />citizens can change the world.</p>
+          <p>Indeed, it is the only thing that ever has.</p>
+          <p class="quote-author">-Margaret Mead</p>
+        </div>
+
+        <br />
+<div class="container">
           <h3>
             Our Mission
           </h3>
@@ -28,7 +81,6 @@
             Citizens for Rational Government is a grassroots Political Action Committee trying to raise awareness and promote education about rational, non-extremist choices for how we govern our society and promote democracy in the U.S.
           </p>
         </div>
-        <img src="images/MM_quote.png" width="1300" alt="Never doubt that a small group of thoughtful, committed citizens can change the world. Indeed, it's the only thing that ever has. -- Margaret Mead" title="Never doubt that a small group of thoughtful, committed citizens can change the world. Indeed, it's the only thing that ever has. -- Margaret Mead" /><br />
         <div class="container">
           <h3>What We Believe</h3>
             <p>
@@ -41,6 +93,13 @@
               </ul>
             </p>
         </div>
+<div class="container clean-weight">
+<span class="h3-inline">C4RG’s Vision</span> is a country where an informed majority governs through thoughtful
+consensus, diluting the influence and control of political extremes.
+<br />
+<span class="h3-inline">C4RGs Mission</span> is to combat political extremism and promote the values and priorities we
+share by motivating informed citizens towards civic action
+</div>
       </section>
       <!-- footer -->
       <section id="footer"></section>
