@@ -108,7 +108,7 @@ input, select, textarea {
 
 	strong, b {
 		color: #252122;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	i, em {
@@ -2426,6 +2426,37 @@ input, select, textarea {
 	opacity: 1 !important;
 }
 /* C4RG Specific */
+/* banners */
+.quote-banner {
+	background: #d2232a;
+	box-sizing: border-box;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	font-family: "Garamond", "EB Garamond", "Adobe Garamond Pro", Georgia, "Times New Roman", serif;
+	font-size: 2rem;
+	justify-content: center;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	max-width: 100%;
+	min-height: 308px;
+	padding: 2rem;
+	width: 800px;
+}
+.quote-banner p {
+	margin: 0;
+	line-height: 1.02;
+	text-align: center;
+}
+.quote-banner p + p { margin-top: 2rem; }
+.quote-banner .quote-author {
+	margin-top: 2rem;
+	text-align: center;
+	font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+	font-weight: 900;
+	font-size: 1.1rem;
+	letter-spacing: 1.5px;
+}
 /* basics */
 h3, h4, h5 {
 	display: flex;
@@ -2479,6 +2510,9 @@ h5 + ul {
 	width: 100%;
 }
 /* Media Queries */
+@media (max-width: 480px) {
+.quote-banner p { font-size: 24px; }
+}
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {

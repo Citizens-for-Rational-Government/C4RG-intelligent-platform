@@ -8,8 +8,6 @@
     <script async src="assets/js/tracking.js"></script>
     <script defer src="assets/js/loader.js"></script>
     <style>
-    
-
     .banner {
       background-color: #9eefff;
       width: 100%;
@@ -26,6 +24,23 @@
       line-height: 1.15;
       letter-spacing: 0;
     }
+
+  .ads {
+    max-width: 1200px;      /* match your site's content width */
+    margin: 0 auto;        /* center the wrapper on the page */
+    padding: 0 1rem;       /* keeps images off the screen edge on phones */
+    box-sizing: border-box;
+  }
+
+.ad {
+  display: block;
+  max-width: 100%;       /* never wider than .ads */
+  height: auto;
+}
+.ad-left   { margin: 0 auto 1rem 0; }
+.ad-center { margin: 0 auto 1rem; }
+.ad-right  { margin: 0 0 1rem auto; }
+    
   </style>
   </head>
   <body class="is-loading">
@@ -46,6 +61,15 @@
           <h4>What is Extremism in Politics?</h4>
         </div>
           <br><br>
+
+            <p>
+          Extremism is sometimes hard to
+see and is often masked in language that makes
+it seem like the obvious solution. A lack of
+majority support does not make a position
+extremist, but if it meets any of these criteria, it
+often is: </p>
+
           <h3>This is How We Define it</h3>
           
             <p>
@@ -57,10 +81,24 @@
                 <li>Can be destructive of established institutions or norms</li>
               </ul>
             </p>
-          </div>
+
+        <div class="banner">
+          <h4>Recent Examples of Extremism Ads</h4>
+        </div>
+          <br>
+</div>
+</section>
+<div class="ads">
+  <img class="ad ad-left"   src="/images/extreme-ads/Haley-Stevens.png" alt="" />
+  <img class="ad ad-center" src="/images/extreme-ads/Bo-French.png" alt="" />
+  <img class="ad ad-right"  src="/images/extreme-ads/Mayes-Middleton.png" alt="" />
+</div>
+
+
+          
           <br><br><br><br><br><br><br><br><br><br><br>
 
-      </section>
+      
       <!-- footer -->
       <section id="footer"></section>
     </div><!-- page-header -->

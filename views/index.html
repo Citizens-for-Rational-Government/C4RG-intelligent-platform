@@ -5,6 +5,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.css" />
+     <style>
+      .quote-banner {
+        box-sizing: border-box;
+        width: 800px;
+        max-width: 100%;
+        min-height: 208px;
+        margin: 0 auto;
+        padding: 40px;
+        background: #d2232a;
+        color: #fff;
+        text-align: center;
+        font-family: "Garamond", "EB Garamond", "Adobe Garamond Pro", Georgia, "Times New Roman", serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .clean-weight {
+        font-weight: 500;
+      }
+      .quote-banner p {
+        margin: 0;
+        font-size: 34px;
+        line-height: 1.02;
+        text-align: center;
+      }
+      .quote-banner p + p { margin-top: 26px; }
+      .quote-banner .quote-author {
+        margin-top: 34px;
+        text-align: center;
+        font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+        font-weight: 900;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+      }
+      @media (max-width: 480px) {
+        .quote-banner p { font-size: 24px; }
+      }
+      </style>
     <script async src="assets/js/tracking.js"></script>
     <script defer src="assets/js/loader.js"></script>
   </head>
@@ -20,9 +58,23 @@
     <div id="page-header">
       <section id="header"></section>
       <section id="main">
-        <div class="container">
-          <img src="images/homepage-rep-dem.png" alt="Democrat or Republican, are you tired of only one choice on election day?" title="Democrat or Republican, are you tired of only one choice on election day?" width="1280" height="720" loading="lazy" decoding="async" /><br />
-        </div>
+
+        <div class="quote-banner">
+          <p>American
+politics is pulled toward
+the extremes. Most
+Americans aren’t. We
+help citizens recognize
+political extremism,
+understand where we
+actually agree, and
+explore solutions built
+around an informed
+majority</p>
+        
+        </div>  
+        <br />
+        
         <div class="container">
             <p>
               We think the radicalized direction of the country in the early-21st-century is unsustainable, unless the majority of Americans speak up and demand change&mdash;use this site to start demanding changes
@@ -33,8 +85,36 @@
             <p>
               <ul class="left">
                 <li>Dive <b>DEEP</b> into our philosophy and see what we are doing to further our mission</li>
-                <li>See who we endorse in <b>BOTH POLITICAL PARTIES</b> in upcoming Primaries and General Elections. These candidates may not reflect all of your political values or priorities, but in our opinion they are rational in their decision making and do not take the extreme positions of their party just to get attention or rile up their base</li>
-                <li>Discuss and Debate with our <b>MAJORITARIAN CANDIDATE</b>, an AI bot trained on the major issues facing America with a focus on rational and actionable platform positions that data shows the majority of Americans support! See what a truly independent candidate could do for our country</li>
+                <li>Learn how to
+recognize political
+extremism and how the
+parties use it to
+manipulate their bases
+and turn us against
+each other</li>
+<li>Use
+our Research Bot,
+“Verity”, to educate
+yourself on what
+Americans actually
+agree on across our
+most important
+issues, even develop
+a personal action
+plan to help fight
+extremism</li>
+                <li>See
+what a non-extremist,
+independent candidate
+might look and act like by
+conversing with ”MC”, our
+Majoritarian Candidate, an
+AI trained on the major
+issues facing America with a
+focus on rational and
+actionable platform
+positions that data shows
+most Americans support</li>
                 <li><a href="mailto:info@citizensforrationalgovernment.org?subject=User%20Contact%20From%20Site&body=Your%20message...">Send us an email</a> to ask us a question or receive additional information on our activities in the future</li>
                 <li><a href="https://www.votetexas.gov/register-to-vote/" target="_blank" rel="noopener">Register here to vote</a> in Texas primaries</li>
                 <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-help-us-bring-rational-politics-back?impact_chain_source=russolivier2%40gmai.com">Donate to Citizens for Rational Government</a> to help us educate and prepare the public to fight extremism at the ballot box</li>
