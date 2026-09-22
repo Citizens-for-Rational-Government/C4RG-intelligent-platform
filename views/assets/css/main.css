@@ -2427,6 +2427,16 @@ input, select, textarea {
 }
 /* C4RG Specific */
 /* banners */
+.fear-banner {
+	background: #9eefff;
+	color: #ff0000;
+	display: flex;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+}
 .quote-banner {
 	background: #d2232a;
 	box-sizing: border-box;
@@ -2439,7 +2449,7 @@ input, select, textarea {
 	margin: 0 auto;
 	margin-bottom: 1rem;
 	max-width: 100%;
-	min-height: 308px;
+	min-height: 15rem;
 	padding: 2rem;
 	width: 800px;
 }
@@ -2456,6 +2466,14 @@ input, select, textarea {
 	font-weight: 900;
 	font-size: 1.1rem;
 	letter-spacing: 1.5px;
+}
+/* ads */
+.ads {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 1rem 0;
 }
 /* basics */
 h3, h4, h5 {
