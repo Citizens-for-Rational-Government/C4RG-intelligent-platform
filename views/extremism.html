@@ -25,84 +25,23 @@
       letter-spacing: 0;
     }
 
-    /* Thumbnails spaced evenly across the content area */
-    .ad-gallery {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      width: 100%;
-      padding: 20px 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
+  .ads {
+    max-width: 1200px;      /* match your site's content width */
+    margin: 0 auto;        /* center the wrapper on the page */
+    padding: 0 1rem;       /* keeps images off the screen edge on phones */
+    box-sizing: border-box;
+  }
 
-    .ad-gallery img.ad-thumb {
-      width: 17% !important;
-      min-width: 100px;
-      max-width: 17%;
-      height: auto !important;   /* keeps original proportions */
-      margin: 0;
-      padding: 0;
-      display: block;
-      cursor: pointer;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
-    }
-
-    .ad-gallery img.ad-thumb:hover {
-      transform: scale(1.05);
-    }
-
-    /* On small screens, show 2-3 per row instead of 5 tiny ones */
-    @media (max-width: 600px) {
-      .ad-gallery img.ad-thumb {
-        width: 30% !important;
-        max-width: 30%;
-      }
-    }
-
-    /* Full-screen overlay for the enlarged image */
-    .ad-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 10000;
-      justify-content: center;
-      align-items: center;
-      cursor: zoom-out;
-    }
-
-    .ad-lightbox.open {
-      display: flex;
-    }
-
-    .ad-lightbox img#ad-lightbox-img {
-      width: 90vw !important;
-      height: 90vh !important;
-      max-width: none;
-      object-fit: contain;     /* fills as much of the screen as possible without distortion */
-      margin: 0;
-      cursor: default;
-    }
-
-    .ad-lightbox-close {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      background: none !important;
-      border: none !important;
-      box-shadow: none !important;
-      color: #fff !important;
-      font-size: 40px;
-      line-height: 1;
-      padding: 0;
-      cursor: pointer;
-    }
-    </style>
+.ad {
+  display: block;
+  max-width: 100%;       /* never wider than .ads */
+  height: auto;
+}
+.ad-left   { margin: 0 auto 1rem 0; }
+.ad-center { margin: 0 auto 1rem; }
+.ad-right  { margin: 0 0 1rem auto; }
+    
+  </style>
   </head>
   <body class="is-loading">
     <noscript>
@@ -118,51 +57,48 @@
       <section id="main">
         <div class="container">
           <br>
-          <div class="banner">
-            <h4>What is Extremism in Politics?</h4>
-          </div>
+        <div class="banner">
+          <h4>What is Extremism in Politics?</h4>
+        </div>
           <br><br>
 
-          <p>
-            Extremism is sometimes hard to
-            see and is often masked in language that makes
-            it seem like the obvious solution. A lack of
-            majority support does not make a position
-            extremist, but if it meets any of these criteria, it
-            often is:
-          </p>
+            <p>
+          Extremism is sometimes hard to
+see and is often masked in language that makes
+it seem like the obvious solution. A lack of
+majority support does not make a position
+extremist, but if it meets any of these criteria, it
+often is: </p>
 
           <h3>This is How We Define it</h3>
+          
+            <p>
+              <ul class="left">
+                <li>Policy positions far outside public support, that are used to agitate a vocal minority</li>
+                <li>Often born of small or infrequent events blown out of proportion </li>
+                <li>Usually fear based</li>
+                <li> Often demonizes an entire group and promotes zero sum governance (no win-win solutions)</li>
+                <li>Can be destructive of established institutions or norms</li>
+              </ul>
+            </p>
 
-          <ul class="left">
-            <li>Policy positions far outside public support, that are used to agitate a vocal minority</li>
-            <li>Often born of small or infrequent events blown out of proportion</li>
-            <li>Usually fear based</li>
-            <li>Often demonizes an entire group and promotes zero sum governance (no win-win solutions)</li>
-            <li>Can be destructive of established institutions or norms</li>
-          </ul>
-
-          <div class="banner">
-            <h4>How to Spot Extremism</h4>
-          </div>
+        <div class="banner">
+          <h4>Recent Examples of Extremism Ads</h4>
+        </div>
           <br>
+</div>
+</section>
+<div class="ads">
+  <img class="ad ad-left"   src="/images/extreme-ads/Haley-Stevens.png" alt="" />
+  <img class="ad ad-center" src="/images/extreme-ads/Bo-French.png" alt="" />
+  <img class="ad ad-right"  src="/images/extreme-ads/Mayes-Middleton.png" alt="" />
+</div>
 
-          <!-- Thumbnail gallery (now INSIDE the container) -->
-          <div class="ad-gallery">
-            <img class="ad-thumb" src="/images/extreme-ads/adComparison1.jpeg" alt="Ad comparison 1">
-            <img class="ad-thumb" src="/images/extreme-ads/adComparison2.jpeg" alt="Ad comparison 2">
-            <img class="ad-thumb" src="/images/extreme-ads/adComparison3.jpeg" alt="Ad comparison 3">
-            <img class="ad-thumb" src="/images/extreme-ads/adComparison4.jpeg" alt="Ad comparison 4">
-            <img class="ad-thumb" src="/images/extreme-ads/adComparison5.jpeg" alt="Ad comparison 5">
-            <b>(click any above to see full sized image)</b>
-          </div>
-* These advertisements are presented solely as examples of political messaging that illustrate characteristics of extremism discussed above. 
-<br>Their inclusion is not an endorsement of or opposition to any candidate or candidacy.
-          <br>
-          <br><br><br><br><br><br><br><br><br><br>
-        </div><!-- container -->
-      </section><!-- main -->
 
+          
+          <br><br><br><br><br><br><br><br><br><br><br>
+
+      
       <!-- footer -->
       <section id="footer"></section>
     </div><!-- page-header -->
